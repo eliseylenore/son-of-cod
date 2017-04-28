@@ -20,5 +20,7 @@ namespace SonOfCod.Models
         public DbSet<Product> Products { get; set; }
 
         public DbSet<MarketingPage> MarketingPages { get; set; }
+
+        public DbSet<Subscriber> Subscribers { get; set; }
     }
 }

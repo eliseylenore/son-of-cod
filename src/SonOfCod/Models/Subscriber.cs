@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SonOfCod.Models
 {
-    [Table("MarketingPages")]
+    [Table("Subscribers")]
     public class Subscriber
     {
         [Key]
