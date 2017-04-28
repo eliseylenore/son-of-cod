@@ -2,11 +2,39 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Son of Cod</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Account/Register">Create New User</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Account/Login">Sign In</a></li>
+                    }
+
+                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form class="navbar-form navbar-right" action="/Account/Logoff" method="post">
+                        <div class="form-group">
+                            <input type="submit" class="form-control" value="Log out" />
+                        </div>
+                    </form>
+                }
+                
+        </div>
+    </nav>
+    <div class="container">
         @RenderBody()
     </div>
 </body>

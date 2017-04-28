@@ -6,15 +6,18 @@
 
 @model LoginViewModel
 
-<h2>Log in with your account</h2>
+<h2>Admin Login</h2>
 <hr />
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email)
+    <div class="form-group">
+        
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email"})
+    </div>
 
-    @Html.LabelFor(m => m.Password)
-    @Html.PasswordFor(m => m.Password)
+    <div class="form-group">
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+    </div>
 
     <input type="submit" value="Log in" class="btn btn-default" />
 }
