@@ -15,10 +15,12 @@
             <ul class="nav navbar-nav navbar-right">
                     @if (User.Identity.IsAuthenticated)
                     {
+                        <li><a href="/Subscribers/Index">Newsletter Subscribers</a></li>
                         <li><a href="/Account/Register">Create New User</a></li>
                     }
                     else
                     {
+                        <li><a href="/Subscribers/Create">Subscribe to Newsletter</a></li>
                         <li><a href="/Account/Login">Sign In</a></li>
                     }
 

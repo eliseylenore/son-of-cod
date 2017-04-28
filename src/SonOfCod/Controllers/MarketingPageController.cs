@@ -17,8 +17,7 @@ namespace SonOfCod.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         public IActionResult Index()
         {
-            MarketingPage marketingPage = _db.MarketingPages.Single();
-            return View(marketingPage);
+            return View(_db.MarketingPages.FirstOrDefault(x => x is MarketingPage));
         }
     }
 }
