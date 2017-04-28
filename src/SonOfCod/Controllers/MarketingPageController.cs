@@ -15,6 +15,12 @@ namespace SonOfCod.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
+
+        public MarketingPageController(UserManager<ApplicationUser> userManager, ApplicationDbContext db)
+        {
+            _userManager = userManager;
+            _db = db;
+        }
         public IActionResult Index()
         {
             return View(_db.MarketingPages.FirstOrDefault(x => x is MarketingPage));
