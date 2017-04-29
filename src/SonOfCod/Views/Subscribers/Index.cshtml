@@ -2,3 +2,12 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model IEnumerable<SonOfCod.Models.Subscriber>
+<h2>Email Subscribers</h2>
+
+@foreach(var subscriber in Model)
+{
+    <div>
+        @Html.DisplayFor(modelSubscriber => subscriber.Email)
+    </div>
+}

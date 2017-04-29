@@ -8,8 +8,8 @@ using SonOfCod.Models;
 namespace SonOfCod.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170428202213_AddProductAndMarketingPage")]
-    partial class AddProductAndMarketingPage
+    [Migration("20170429184838_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -216,6 +216,22 @@ namespace SonOfCod.Migrations
                     b.HasIndex("MarketingPageId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("SonOfCod.Models.Subscriber", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subscribers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
