@@ -203,6 +203,8 @@
 "C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Controllers\SubscribersController.cs"
 "C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Migrations\20170429184838_Initial.cs"
 "C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Migrations\20170429184838_Initial.Designer.cs"
+"C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Migrations\20170430013736_DeleteRelationship.cs"
+"C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Migrations\20170430013736_DeleteRelationship.Designer.cs"
 "C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Models\ApplicationDbContext.cs"
 "C:\Users\elise\Desktop\son-of-cod\src\SonOfCod\Models\ApplicationUser.cs"
