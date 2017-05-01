@@ -3,6 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
@@ -12,6 +13,16 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">Son of Cod</a>
             </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form class="navbar-form navbar-right" action="/Account/Logoff" method="post">
+                    <div class="form-group">
+                        <input type="submit" class="form-control" value="Log out" />
+                    </div>
+                </form>
+            }
+
+
             <ul class="nav navbar-nav navbar-right">
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -25,15 +36,7 @@
                     }
 
                 </ul>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <form class="navbar-form navbar-right" action="/Account/Logoff" method="post">
-                        <div class="form-group">
-                            <input type="submit" class="form-control" value="Log out" />
-                        </div>
-                    </form>
-                }
-                
+               
         </div>
     </nav>
     <div class="container">

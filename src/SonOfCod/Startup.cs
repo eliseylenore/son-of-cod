@@ -47,6 +47,8 @@ namespace SonOfCod
                     template: "{controller=Account}/{action=index}/{id?}");
             });
 
+            app.UseStaticFiles();
+
             app.Run(async (context1) =>
             {
                 await context1.Response.WriteAsync("Hello World!");
